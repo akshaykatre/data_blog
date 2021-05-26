@@ -11,3 +11,11 @@ To find the regex patterns that are applicable
 ```
 https://regex101.com/
 ```
+
+### Open source licence information  
+
+```
+https://choosealicense.com/licenses/
+```
+
+
