@@ -35,3 +35,10 @@ For LaTeX, Markdown table generators
 ```
 https://www.tablesgenerator.com/
 ```
+
+### Deployment of dash to heroku
+```
+https://dash.plotly.com/deployment
+```
+
+
