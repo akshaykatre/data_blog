@@ -25,17 +25,17 @@ on your web browser. For more details you can visit: [dash's main pages](https:/
 For building the local instance, you need to do as follows:   
 
 Setup virutal environment 
-'''
->> python -m venv virtenv 
->> source virtenv/bin/activate ## Linux 
->> virtenv\Scripts\activate ## Windows 
-'''
+```(console)
+>> python -m venv virtenv  
+>> source virtenv/bin/activate ## Linux   
+>> virtenv\Scripts\activate ## Windows   
+```
 
 Install the following packages: 
-'''
+```(console)
 >> pip install dash 
 >> pip install pandas ## incase you plan to use a local CSV/ Excel/ SQLite file
-'''
+``` 
 
 Create 
 
