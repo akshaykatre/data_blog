@@ -8,8 +8,10 @@ I wanted to let the user have access to the dashboard at any point in time.
 This way, if they wanted to cross-verify some details, they could do this 
 instantly. 
 
-In this document, I will document on how to build a simple web application
-using DASH which 
+In this document, I will mention how to build a simple web application
+using DASH:   
+1. Locally on your own machine 
+2. Hosted on Heroku
 
 ## Enter DASH
 
@@ -20,4 +22,20 @@ on your web browser. For more details you can visit: [dash's main pages](https:/
 
 ### Building a local instance 
 
-The first 
+For building the local instance, you need to do as follows:   
+
+Setup virutal environment 
+'''
+>> python -m venv virtenv 
+>> source virtenv/bin/activate ## Linux 
+>> virtenv\Scripts\activate ## Windows 
+'''
+
+Install the following packages: 
+'''
+>> pip install dash 
+>> pip install pandas ## incase you plan to use a local CSV/ Excel/ SQLite file
+'''
+
+Create 
+
