@@ -37,5 +37,27 @@ Install the following packages:
 >> pip install pandas ## incase you plan to use a local CSV/ Excel/ SQLite file
 ``` 
 
-Create 
+You can create the following python file:
+```(python) 
+## Import the libraries, i.e. dash and pandas
+import pandas
+import dash 
+import dash_table 
+
+## Load your dataset into a dataframe
+df = pandas.read_csv("test_data.csv")
+
+app = dash.Dash("Test") 
+
+## The following describes the layout of the app/ webpage. At this point
+## the only layout is a simple table on the webpage i.e. the data table
+app.layout = dash_table.DataTable(id='table', 
+                                    data=df.to_dict('records'),
+                                    columns=[{"name": i, "id": i} for i in df.columns])
+
+## Run the app and to view your results, go to http:/127.0.0.1:8050 - this is usually 
+## where the output of dash should be, please check the console message from dash in 
+## case the address is not working
+app.run_server(debug=True)
+```
 
