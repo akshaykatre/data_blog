@@ -24,20 +24,25 @@ on your web browser. For more details you can visit: [dash's main pages](https:/
 
 For building the local instance, you need to do as follows:   
 
-Setup virutal environment 
+In a folder that you want to work in, setup virutal environment 
 ```(console)
->> python -m venv virtenv  
->> source virtenv/bin/activate ## Linux   
->> virtenv\Scripts\activate ## Windows   
+$ python -m venv virtenv  
+$ source virtenv/bin/activate ## Linux   
+$ virtenv\Scripts\activate ## Windows   
 ```
 
 Install the following packages: 
 ```(console)
->> pip install dash 
->> pip install pandas ## incase you plan to use a local CSV/ Excel/ SQLite file
+$ pip install dash 
+$ pip install pandas ## incase you plan to use a local CSV/ Excel/ SQLite file
 ``` 
 
-You can create the following python file:
+Follow the instructions as mentioned on the [dash webpage](https://dash.plotly.com/datatable)
+<details> 
+  <summary> The same code is available here as well </summary>   
+  
+  
+Create a python file (eg. dashboard.py) 
 ```(python) 
 ## Import the libraries, i.e. dash and pandas
 import pandas
@@ -55,9 +60,50 @@ app.layout = dash_table.DataTable(id='table',
                                     data=df.to_dict('records'),
                                     columns=[{"name": i, "id": i} for i in df.columns])
 
-## Run the app and to view your results, go to http:/127.0.0.1:8050 - this is usually 
-## where the output of dash should be, please check the console message from dash in 
-## case the address is not working
+## Run the app and to view your results, go to http:/127.0.0.1:8050
 app.run_server(debug=True)
 ```
+</details> 
+
+The dashboard is now available to you locally at http:/127.0.0.1:8050
+
+### Hosting on the web with Heroku 
+
+If you'd like to publish this on a browser, and don't want to worry about the hosting, 
+and the infrastructure, you can use Heroku.
+
+To the local code above, you need to make a few small changes, again they are all described 
+on the [deployment page]()  
+
+<details> 
+  <summary> You can find the same descriptions here </summary>   
+  You will need a Heroku account: [Heroku getting started with python]()  
+  
+  Once you are setup with an account with Heroku, startup in a new folder. 
+  
+  ```(console)
+  $ mkdir dash_app_example
+  $ cd dash_app_example
+  ```
+  
+  Initialise the folder with git and create a virtual environment 
+  ```(console)
+  $ git init
+  $ python -m venv virtenv  
+  $ source virtenv/bin/activate ## Linux   
+  $ virtenv\Scripts\activate ## Windows   
+  ```
+
+
+  Install the following packages 
+  ```(console)
+  $ pip install dash 
+  $ pip install pandas ## incase you plan to use a local CSV/ Excel/ SQLite file
+  $ pip install plotly
+  $ pip install gunicorn 
+  ```   
+  
+  Make changes to your dashboard.py file: 
+  
+
 
