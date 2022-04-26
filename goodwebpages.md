@@ -41,4 +41,9 @@ https://www.tablesgenerator.com/
 https://dash.plotly.com/deployment
 ```
 
+### Shell check 
+```
+https://www.shellcheck.net/
+```
+
 
