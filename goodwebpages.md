@@ -42,8 +42,16 @@ https://dash.plotly.com/deployment
 ```
 
 ### Shell check 
+Explicit error messages for any Shell commands that you write! 
 ```
 https://www.shellcheck.net/
+```
+
+### Curl converter 
+To convert curl statements into python (or any other language).  
+Easy when you want to work with [requests](https://pypi.org/project/requests/).
+```
+https://curlconverter.com/
 ```
 
 
